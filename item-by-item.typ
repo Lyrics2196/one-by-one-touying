@@ -15,7 +15,6 @@
 
 #let item-by-item(body) = {
   if body.func() == [].func() {
-    // let children = body.children.filter(it => it != [ ] and it != parbreak())
     let new-seq = body.children.map(proc-seq)
     return new-seq.sum()
   }
