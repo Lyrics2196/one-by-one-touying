@@ -1,6 +1,6 @@
+#import "/item-by-item.typ": *
 #import "@preview/touying:0.6.1": *
 #import themes.simple: *
-#import "/item-by-item.typ": *
 #show: simple-theme.with()
 
 == 列表逐项显示 (List)
