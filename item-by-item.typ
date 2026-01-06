@@ -21,7 +21,5 @@
 }
 
 #let one-by-one(..bodies) = {
-  for body in bodies.pos() {
-    body + pause
-  }
+  return bodies.pos().map(it => it + pause).sum()
 }
