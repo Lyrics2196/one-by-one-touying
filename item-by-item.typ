@@ -2,12 +2,9 @@
 
 
 #let proc-seq(body) = {
-  if body.func() == list.item {
+  if body.func() == list.item or body.func() == enum.item {
     let new-body = body.body + [ ] + pause
-    return list.item(new-body)
-  } else if body.func() == enum.item {
-    let new-body = body.body + [ ] + pause
-    return enum.item(new-body)
+    return (body.func())(new-body)
   } else {
     return body
   }
