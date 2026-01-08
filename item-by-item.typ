@@ -14,7 +14,7 @@
   if body.func() == [].func() {
     return body.children.map(proc-seq).sum()
   } else {
-    return none
+    return body
   }
 }
 
