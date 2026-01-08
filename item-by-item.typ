@@ -12,8 +12,9 @@
 
 #let item-by-item(body) = {
   if body.func() == [].func() {
-    let new-seq = body.children.map(proc-seq)
-    return new-seq.sum()
+    return body.children.map(proc-seq).sum()
+  } else {
+    return none
   }
 }
 
