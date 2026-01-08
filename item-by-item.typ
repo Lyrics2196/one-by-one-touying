@@ -3,8 +3,7 @@
 
 #let proc-seq(body) = {
   if body.func() == list.item or body.func() == enum.item {
-    let new-body = body.body + [ ] + pause
-    return (body.func())(new-body)
+    return (body.func())(body.body + [ ] + pause)
   } else {
     return body
   }
